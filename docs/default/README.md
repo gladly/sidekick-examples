@@ -1,6 +1,7 @@
 # Default Example 
 This example uses basic initialization and is the method that requires the least amount of setup. This uses the default minimized Sidekick button which can be setup as an icon or text and is configured within the Sidekick settings.
 
+(/default_button.png)
 
 
 ```html
