@@ -4,7 +4,7 @@ These are examples of different ways you can configure the Gladly Sidekick on we
 You can view the Sidekick developer documentation [here](https://developer.gladly.com/sidekick/).
 
 ## Default Setup
-If no customization is needed and you want to the most straightfoward setup. 
+If no customization is needed and you want to use the most straightfoward setup. 
 
 [View Example](docs/default/example.html)
 
