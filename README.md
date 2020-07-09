@@ -1,11 +1,11 @@
 # Gladly Sidekick Examples
-Examples how Gladly Sidekick can be configured
+These are examples of different ways you can configure the Gladly Sidekick on web. You can view the Sidekick developer documentation [here](https://developer.gladly.com/sidekick/).
 
 ## Default setup
-If no customization is needed and you want to write as little code as possble there is an example [here](docs/default)
+If no customization is needed and you want to the most straightfoward setup. [View Example](docs/default)
 
 ## Custom minimized button
-If you want to customize the look of the minimized chat button there is an example [here](docs/custom-minimized-button)
+This is an example of how you can customize the look of the minimized chat button. [View Example](docs/custom-minimized-button)
 
 ## Working with events
-If you want to make use of events that Sidekick is emitting there is an example [here](docs/working-with-events)
+This is an example of how the events that Sidekick is emitting can be used. This can be useful if you want to track Sidekick interactions within an analytics platform such as Google Analytics. [View Example](docs/working-with-events)
