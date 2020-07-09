@@ -1,5 +1,6 @@
 # Gladly Sidekick Examples
-These are examples of different ways you can configure the Gladly Sidekick on web. You can view the Sidekick developer documentation [here](https://developer.gladly.com/sidekick/).
+These are examples of different ways you can configure the Gladly Sidekick on web. 
+You can view the Sidekick developer documentation [here](https://developer.gladly.com/sidekick/).
 
 ## Default setup
 If no customization is needed and you want to the most straightfoward setup. [View Example](docs/default)
