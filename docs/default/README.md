@@ -1,3 +1,3 @@
 # Default Example 
-This example use basic initialization and it the method that requires the least amount of setup.
+This example uses basic initialization and is the method that requires the least amount of setup.
 
