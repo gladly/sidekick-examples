@@ -2,6 +2,7 @@
 This example illustrates how to make use of the number of events that Sidekick emits. The full list of events that Sidekick emits can be found [here](https://developer.gladly.com/sidekick/Gladly.html#event:availability:change). 
 
 **Simple Event Example**
+
 To subscribe to events Sidekick must be first be initialized and be ready to use. To know when Sideick is initialized and ready to be used we make use of the manual initialization method. 
 ```html
 <!DOCTYPE html>
@@ -50,6 +51,7 @@ To subscribe to events Sidekick must be first be initialized and be ready to use
 ```
 
 **Sending Events to Google Analytics**
+
 This is a simple example of how the events can be sent to Google Analytics. This document provides more details on how to work with custom events in Google Analytics.
 ```javascript
 Gladly.init({
