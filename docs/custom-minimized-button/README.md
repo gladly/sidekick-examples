@@ -32,44 +32,42 @@ A new element with ID "custom-gladly-chat-button" is added to the body, CSS will
 ```
 
 **SAMPLE CSS**
-          Position buttom in the lower right corner
-         ```css
-        #custom-gladly-chat-button {
-          position: fixed;
-          padding: 10px;
-          right: 20px;
-          bottom: 10px;
-        }
-
- ```
-          By default we hide the button. 
+Position buttom in the lower right corner
 ```css
-        #custom-gladly-chat-button {
-          display: none;
-        }
-        #custom-gladly-chat-button #with-active-chat {
-          display: none;
-        }
-        #custom-gladly-chat-button #with-unread-message {
-          display: none;
-        }
-
-       ```
-          If "gladly-show" is there we show the button 
-        ```
-        #custom-gladly-chat-button.gladly-show {
-          display: block;
-        }
-        ```
+#custom-gladly-chat-button {
+position: fixed;
+padding: 10px;
+right: 20px;
+bottom: 10px;
+}
+```
+By default we hide the button. 
+```css
+#custom-gladly-chat-button {
+display: none;
+}
+#custom-gladly-chat-button #with-active-chat {
+display: none;
+}
+#custom-gladly-chat-button #with-unread-message {
+display: none;
+}
+```
+If "gladly-show" is there we show the button 
+```
+#custom-gladly-chat-button.gladly-show {
+display: block;
+}
+```
 If user has gone through onboarding the "gladly-has-authenticated" class will be added, we hide the element with the text "START NEW CHAT" and show the element with the text "CONTINUE EXISTING CHAT"
-         ```css
-        #custom-gladly-chat-button.gladly-has-authenticated #with-no-active-chat {
-          display: none;
-        }
-        #custom-gladly-chat-button.gladly-has-authenticated #with-active-chat {
-          display: block;
-        }
-        #custom-gladly-chat-button.gladly-unread #with-unread-message {
-          display: block;
-        }
+```css
+#custom-gladly-chat-button.gladly-has-authenticated #with-no-active-chat {
+display: none;
+}
+#custom-gladly-chat-button.gladly-has-authenticated #with-active-chat {
+display: block;
+}
+#custom-gladly-chat-button.gladly-unread #with-unread-message {
+display: block;
+}
 ```
