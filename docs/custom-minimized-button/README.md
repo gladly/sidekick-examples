@@ -16,6 +16,7 @@ If the HTML custom-gladly-chat-button id is present, Gladly will do the followin
 It is up to you to utilize these classes and hooks properly to render and style your own custom button as you wish.
 
 **SAMPLE HTML**
+
 A new element with ID "custom-gladly-chat-button" is added to the body, CSS will be used to place it where we want on the page. Sidekick will add different classes to the element to tell the button what state Sidekick is in, CSS can then be used to change the apperance of the button to match expectation.
 ```html
     <button id="custom-gladly-chat-button" onclick="Gladly.show()">
@@ -32,6 +33,7 @@ A new element with ID "custom-gladly-chat-button" is added to the body, CSS will
 ```
 
 **SAMPLE CSS**
+
 Position buttom in the lower right corner
 ```css
 #custom-gladly-chat-button {
