@@ -1,4 +1,4 @@
-# Working with events
+# Working with Events
 This example illustrates how to make use of the number of events that Sidekick emits. The full list of events that Sidekick emits can be found [here](https://developer.gladly.com/sidekick/Gladly.html#event:availability:change). 
 
 **Simple Event Example**
