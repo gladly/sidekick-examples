@@ -16,61 +16,60 @@ If the HTML custom-gladly-chat-button id is present, Gladly will do the followin
 It is up to you to utilize these classes and hooks properly to render and style your own custom button as you wish.
 
 **SAMPLE HTML**
+A new element with ID "custom-gladly-chat-button" is added to the body, CSS will be used to place it where we want on the page. Sidekick will add different classes to the element to tell the button what state Sidekick is in, CSS can then be used to change the apperance of the button to match expectation.
 ```html
-<div id="custom-gladly-chat-button" onclick="Gladly.show()">
-  <div id="gladly-not-authenticated">
-    <span>LIVE CHAT</span>
-  </div>
-  <div id="gladly-authenticated">
-    <svg width="18" height="18" fill="none" viewBox="0 0 18 18">
-      <path fill="#000" />
-    </svg>
-    <span class="unread-dot"></span>
-   </div>
-</div>
+    <button id="custom-gladly-chat-button" onclick="Gladly.show()">
+      <div id="with-no-active-chat">
+        <span>START NEW CHAT</span>
+      </div>
+      <div id="with-active-chat">
+        <span>CONTINUE EXISTING CHAT</span>
+        <div id="with-unread-message">
+          <span> (unread message)</span>
+        </div>
+      </div>
+    </button>
 ```
 
 **SAMPLE CSS**
+          Position buttom in the lower right corner
+         ```css
+        #custom-gladly-chat-button {
+          position: fixed;
+          padding: 10px;
+          right: 20px;
+          bottom: 10px;
+        }
+
+ ```
+          By default we hide the button. 
 ```css
-<style type="text/css">
-    #custom-gladly-chat-button {
-      visibility: hidden;
-    }
+        #custom-gladly-chat-button {
+          display: none;
+        }
+        #custom-gladly-chat-button #with-active-chat {
+          display: none;
+        }
+        #custom-gladly-chat-button #with-unread-message {
+          display: none;
+        }
 
-    #custom-gladly-chat-button #gladly-not-authenticated {
-        visibility: hidden;
-    }
-
-    #custom-gladly-chat-button #gladly-authenticated {
-        visibility: hidden;
-    }
-
-    #custom-gladly-chat-button.gladly-show #gladly-not-authenticated {
-        visibility: visible;
-    }
-
-    #custom-gladly-chat-button.gladly-show.gladly-has-authenticated #gladly-authenticated {
-        visibility: visible;
-    }
-
-    #custom-gladly-chat-button.gladly-show.gladly-has-authenticated #gladly-not-authenticated {
-        visibility: hidden;
-    }
-
-    #custom-gladly-chat-button .unread-dot {
-        visibility: hidden;
-    }
-
-    #custom-gladly-chat-button.gladly-unread .unread-dot {
-        background-color: green;
-        border-radius: 50%;
-        display: inline;
-        height: 8px;
-        position: absolute;
-        right: 12px;
-        top: 8px;
-        visibility: visible;
-        width: 8px;
-    }
-</style>
+       ```
+          If "gladly-show" is there we show the button 
+        ```
+        #custom-gladly-chat-button.gladly-show {
+          display: block;
+        }
+        ```
+If user has gone through onboarding the "gladly-has-authenticated" class will be added, we hide the element with the text "START NEW CHAT" and show the element with the text "CONTINUE EXISTING CHAT"
+         ```css
+        #custom-gladly-chat-button.gladly-has-authenticated #with-no-active-chat {
+          display: none;
+        }
+        #custom-gladly-chat-button.gladly-has-authenticated #with-active-chat {
+          display: block;
+        }
+        #custom-gladly-chat-button.gladly-unread #with-unread-message {
+          display: block;
+        }
 ```
