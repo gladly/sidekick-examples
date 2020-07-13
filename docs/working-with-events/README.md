@@ -1,9 +1,7 @@
 # Working with Events
 The following examples illustrate how to make use of the number of events that Sidekick emits. The full list of events that Sidekick emits can be found [here](https://developer.gladly.com/sidekick/Gladly.html#event:availability:change). 
 
-To subscribe to events Sidekick must be first be initialized and be ready to use. To know when Sideick is initialized and ready to be used we make use of the manual initialization method. 
-
-In this example Sidekick is initialized with Sidekick API, it uses Javascript Promises to signal that Sidekick has been initialized. More information about Promises can be found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise. This script MUST be inserted after the Sidekick load script above.
+To subscribe to events Sidekick must be first be initialized and be ready to use. To know when Sideick is initialized and ready to be used you should make use of the [manual initialization](https://developer.gladly.com/sidekick/) method. The Sidekick API uses Javascript Promises to signal that Sidekick has been initialized. More information about Promises can be found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise. This script MUST be inserted after the Sidekick load script above. A full setup example can be found [here](working-with-events/example.html)
 
 **Simple Event Example**
 ```javascript 
