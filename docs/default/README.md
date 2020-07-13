@@ -3,9 +3,8 @@ This example uses basic initialization and is the method that requires the least
 ![Default Button Image](/default_button.png)
 
 
-```html
-
-  
+**Default Sidekick Setup Example Code**
+```html  
 <!DOCTYPE html>
 <html>
   <head>
