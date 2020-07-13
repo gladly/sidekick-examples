@@ -72,7 +72,9 @@ If user has gone through onboarding, the `.gladly-has-authenticated` class will 
 #custom-gladly-chat-button.gladly-has-authenticated #with-active-chat {
   display: block;
 }
-
+```
+If there is an unread message, the `gladly-unread` class will be appended. Then we want to display the unread message text. 
+```css
 #custom-gladly-chat-button.gladly-unread #with-unread-message {
   display: block;
 }
