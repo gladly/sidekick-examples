@@ -57,13 +57,13 @@ By default we can hide the miminized button.
   display: none;
 }
 ```
-If `.gladly-show` is appended then the button will be shown to the customer.
+If `gladly-show` is appended then the button will be shown to the customer.
 ```css
 #custom-gladly-chat-button.gladly-show {
   display: block;
 }
 ```
-If user has gone through onboarding, the `.gladly-has-authenticated` class will be appended. Then we want to hide the text `START NEW CHAT` and show the element with the text `CONTINUE EXISTING CHAT`.
+If user has gone through onboarding, the `gladly-has-authenticated` class will be appended. Then we want to hide the text `START NEW CHAT` and show the element with the text `CONTINUE EXISTING CHAT`.
 ```css
 #custom-gladly-chat-button.gladly-has-authenticated #with-no-active-chat {
   display: none;
