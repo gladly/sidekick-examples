@@ -48,31 +48,33 @@ bottom: 10px;
 By default we can hide the miminized button. 
 ```css
 #custom-gladly-chat-button {
-display: none;
+  display: none;
 }
 #custom-gladly-chat-button #with-active-chat {
-display: none;
+  display: none;
 }
 #custom-gladly-chat-button #with-unread-message {
-display: none;
+  display: none;
 }
 ```
 If `.gladly-show` is appended then the button will be shown to the customer.
 ```css
 #custom-gladly-chat-button.gladly-show {
-display: block;
+  display: block;
 }
 ```
 If user has gone through onboarding, the `.gladly-has-authenticated` class will be appended. Then we want to hide the text `START NEW CHAT` and show the element with the text `CONTINUE EXISTING CHAT`.
 ```css
 #custom-gladly-chat-button.gladly-has-authenticated #with-no-active-chat {
-display: none;
+  display: none;
 }
+
 #custom-gladly-chat-button.gladly-has-authenticated #with-active-chat {
-display: block;
+  display: block;
 }
+
 #custom-gladly-chat-button.gladly-unread #with-unread-message {
-display: block;
+  display: block;
 }
 ```
 View the code for the full example [here](example.html).
