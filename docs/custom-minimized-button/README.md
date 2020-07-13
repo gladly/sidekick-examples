@@ -75,4 +75,4 @@ display: block;
 display: block;
 }
 ```
-View the code for the full example [here](docs/custom-minimized-button/example.html).
+View the code for the full example [here](/example.html).
