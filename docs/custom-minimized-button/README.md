@@ -39,10 +39,10 @@ A new element with ID "custom-gladly-chat-button" is added to the body, CSS will
 The below CSS positions the minimized button in the lower right corner.
 ```css
 #custom-gladly-chat-button {
-position: fixed;
-padding: 10px;
-right: 20px;
-bottom: 10px;
+  position: fixed;
+  padding: 10px;
+  right: 20px;
+  bottom: 10px;
 }
 ```
 By default we can hide the miminized button. 
