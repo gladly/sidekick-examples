@@ -3,7 +3,7 @@ You can customize the minimized chat button that is rendered on your site to bet
 
 ![](/custom_1.png) ![](/custom_2.png)
 
-**Custom Minimized Button Setup Steps**
+## Custom Minimized Button Setup Steps**
 
 There are a few simple steps to implement a custom minimized chat button.
 1. Gladly requires that an HTML id of `custom-gladly-chat-button` be specified on the outermost HTML element
