@@ -1,7 +1,7 @@
 # Custom Minimized Button Example
 You can customize the minimized chat button that is rendered on your site to better align with your brand. Instead of using the [default button](/docs/default), you can code your own. Below are two examples of custom minimized Sidekick buttons.
 
-![](/custom_1.png) ![](/custom_2.png)
+![](custom_1.png) ![](custom_2.png)
 
 ## Custom Minimized Button Setup Steps
 
