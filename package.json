@@ -1,0 +1,25 @@
+{
+  "name": "sidekick-examples",
+  "version": "1.0.0",
+  "description": "Sidekick examples",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagansystems/sidekick-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sagansystems/sidekick-examples/issues"
+  },
+  "homepage": "https://github.com/sagansystems/sidekick-examples#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
