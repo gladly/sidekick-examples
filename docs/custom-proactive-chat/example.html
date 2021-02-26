@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Gladly Sidekick Custom Proactive Chat Notifications</title>
+
+    <!-- 
+      Custom CSS to change the apperance of the custom minimized button. 
+     -->
+    <style type="text/css">
+        /* 
+          Position buttom in the lower right corner
+         */
+        #custom-gladly-chat-button {
+          position: fixed;
+          padding: 10px;
+          right: 20px;
+          bottom: 10px;
+        }
+
+        /* 
+          By default we hide the button 
+        */
+        #custom-gladly-chat-button {
+          display: none;
+        }
+        #custom-gladly-chat-button #with-active-chat {
+          display: none;
+        }
+        #custom-gladly-chat-button #with-unread-message {
+          display: none;
+        }
+
+        /* 
+          If "gladly-show" is there we show the button 
+        */
+        #custom-gladly-chat-button.gladly-show {
+          display: block;
+        }
+        
+        /* 
+          If user has gone through onboarding the "gladly-has-authenticated" class will be added,
+          we hide the element with the text "START NEW CHAT" and show the element with the text 
+          "CONTINUE EXISTING CHAT"
+        */
+        #custom-gladly-chat-button.gladly-has-authenticated #with-no-active-chat {
+          display: none;
+        }
+        #custom-gladly-chat-button.gladly-has-authenticated #with-active-chat {
+          display: block;
+        }
+        #custom-gladly-chat-button.gladly-unread #with-unread-message {
+          display: block;
+        }
+
+        /*
+          Styling of custom proactive chat campaign notification
+        */
+        .campaign-message {
+          background-color: lightblue;
+            padding: 20px;
+            position: absolute;
+            margin: auto;
+            top: 0; left: 0; bottom: 0; right: 0;
+            height: 150px;
+            width: 250px;
+            box-shadow: 0 0 5px #333;
+            overflow: hidden;
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Gladly Sidekick Custom Proactive Chat Notifications</h1>
+    <div><span>This page illustrates how Gladly Sidekick can be setup to use both custom minimized button and make use of Sidekick events to create a custom Proactive chat notification experience.</span></div>
+
+    <!-- 
+      A new element with ID "custom-gladly-chat-button" is added to the body, CSS will be used to place it where we want on the page.
+      Sidekick will add different classes to the element to tell the button what state Sidekick is in, CSS can then be used to change
+      the apperance of the button to match expectation.
+     -->
+    <button id="custom-gladly-chat-button" onclick="Gladly.show()">
+      <div id="with-no-active-chat">
+        <span>START NEW CHAT</span>
+      </div>
+      <div id="with-active-chat">
+        <span>CONTINUE EXISTING CHAT</span>
+        <div id="with-unread-message">
+          <span> (unread message)</span>
+        </div>
+      </div>
+    </button>
+
+
+    <!-- 
+     The Sidekick script is added in the HTML <body> section, this allows the rest of the page to display while Sidekick is loading.
+    -->
+    <script>
+      !function(c,n,r,t){if(!c[r]){var i,d,p=[];d="PROD"!==t&&t?"STAGING"===t?"https://cdn.gladly.qa/gladly/chat-sdk/widget.js":t:"https://cdn.gladly.com/chat-sdk/widget.js",c[r]={init:function(){i=arguments;var e={then:function(t){return p.push({type:"t",next:t}),e},catch:function(t){return p.push({type:"c",next:t}),e}};return e}},c.__onHelpAppHostReady__=function(t){if(delete c.__onHelpAppHostReady__,(c[r]=t).loaderCdn=d,i)for(var e=t.init.apply(t,i),n=0;n<p.length;n++){var a=p[n];e="t"===a.type?e.then(a.next):e.catch(a.next)}},function(){try{var t=n.getElementsByTagName("script")[0],e=n.createElement("script");e.async=!0,e.src=d+"?q="+(new Date).getTime(),t.parentNode.insertBefore(e,t)}catch(t){}}()}}
+      (window,document,'Gladly','PROD') // Note 'PROD' to the left indicate to use Production, if 'STAGING' is specified Gladly sandbox enviroment will be used.
+    </script>
+
+    <script>
+      /*
+        This adds the message of the Greeting action to the DOM and attaches a onClick event handler that
+        calls Gladly.applyCampaign(campaignId) to let Sidekick know that the action assoicated with the 
+        campaign should run.
+      */
+      const showGreeting = (campaignId, action) => {
+        let messageNode = document.createElement('div');        
+        messageNode.setAttribute('class', 'campaign-message');
+        messageNode.innerText = action.content.message;
+
+        document.getElementsByTagName('body')[0].appendChild(messageNode);
+        messageNode.onclick = () => {
+          Gladly.applyCampaign(campaignId);
+          messageNode.parentNode.removeChild(messageNode);
+        }
+      };
+
+      /*
+        Campaigns can have different "actions" associated with them, in this example we look for a "GREETING"
+        action type. 
+      */
+      const onCampaignTriggered = data => {
+        const campaignData = data[0];
+        for (let i=0; i < campaignData.actions.length; i++) {
+          const action = campaignData.actions[i];
+          switch (action.type) {
+            case "GREETING":
+              showGreeting(campaignData.id, action);
+              break;
+          }
+        }
+      };
+
+      /*
+        In this example Sidekick is initialized with Sidekick API, it uses Javascript Promises to signal that Sidekick has been initialized. 
+        More information about Promises can be found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+        This script MUST be inserted after the Sidekick load script above.
+      */
+      Gladly.init({
+        autoShowWidget: true,
+        appId: '', // This is a value you will be given by Gladly and is specific to each customer.
+      }).then(() => {
+          /**
+            The function inside 'then()' will be called once Sidekick is fully initialized and ready to be used.
+            Events can only be subscribed to after Sidekick has been initialized and ready to be used.
+
+            Here we subscribe to 'campaign:triggered' to get notified every time a proactive chat campaign is triggered.
+          */
+          Gladly.on('campaign:triggered', onCampaignTriggered);
+
+      }).catch((error) => {
+
+        console.log(error);
+
+      });
+    </script>
+  </body>
+</html>
