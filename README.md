@@ -1,7 +1,16 @@
 # Gladly Sidekick Examples
-These are examples of different ways you can configure the Gladly Sidekick on web. 
+These are examples of different ways you can configure the Gladly Sidekick on the web. 
 
 You can view the Sidekick developer documentation [here](https://developer.gladly.com/sidekick/).
+
+To help with exploring the Sidekick functionality a small webserver is included and can be run, for this [Node](https://nodejs.org/) and [NPM](https://www.npmjs.com/) must be installed. 
+To run the webserver do the following. 
+```
+$ npm install
+$ npm start
+```
+visit [http://localhost:3000](http://localhost:3000) in your webbrowser. Don't forget to fill in your appId in the example HTML pages.
+
 
 ## Default Setup
 If no customization is needed and you want to use the most straightfoward setup. 
