@@ -11,14 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sagansystems/sidekick-examples.git"
+    "url": "git+https://github.com/gladly/sidekick-examples.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sagansystems/sidekick-examples/issues"
-  },
-  "homepage": "https://github.com/sagansystems/sidekick-examples#readme",
+  "homepage": "https://github.com/gladly/sidekick-examples#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
