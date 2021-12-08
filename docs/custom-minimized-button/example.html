@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <title>Gladly Sidekick Custom Minimized Button</title>
 
-    <!-- 
+    <!--
       Sidekick can be initialized in two different way, this is the simplest way to initialize but does not
-      offer granular control when Sidekick has been loaded. 
+      offer granular control when Sidekick has been loaded.
      -->
     <script type="text/javascript">
       window.gladlyConfig = {
@@ -14,11 +14,11 @@
       };
     </script>
 
-    <!-- 
-      Custom CSS to change the apperance of the custom minimized button. 
+    <!--
+      Custom CSS to change the apperance of the custom minimized button.
      -->
     <style type="text/css">
-        /* 
+        /*
           Position buttom in the lower right corner
          */
         #custom-gladly-chat-button {
@@ -28,8 +28,8 @@
           bottom: 10px;
         }
 
-        /* 
-          By default we hide the button 
+        /*
+          By default we hide the button
         */
         #custom-gladly-chat-button {
           display: none;
@@ -41,16 +41,16 @@
           display: none;
         }
 
-        /* 
-          If "gladly-show" is there we show the button 
+        /*
+          If "gladly-show" is there we show the button. This class is added by default when loading using window.gladlyConfig.
         */
         #custom-gladly-chat-button.gladly-show {
           display: block;
         }
-        
-        /* 
+
+        /*
           If user has gone through onboarding the "gladly-has-authenticated" class will be added,
-          we hide the element with the text "START NEW CHAT" and show the element with the text 
+          we hide the element with the text "START NEW CHAT" and show the element with the text
           "CONTINUE EXISTING CHAT"
         */
         #custom-gladly-chat-button.gladly-has-authenticated #with-no-active-chat {
@@ -68,7 +68,9 @@
     <h1>Gladly Sidekick Custom Minimized Button</h1>
     <div><span>This page illustrates how Gladly Sidekick can be setup and customize the minimized button</span></div>
 
-    <!-- 
+    <a href="javascript:;" onclick="Gladly.show();">Start new chat</a>
+
+    <!--
       A new element with ID "custom-gladly-chat-button" is added to the body, CSS will be used to place it where we want on the page.
       Sidekick will add different classes to the element to tell the button what state Sidekick is in, CSS can then be used to change
       the apperance of the button to match expectation.
@@ -86,7 +88,7 @@
     </button>
 
 
-    <!-- 
+    <!--
      The Sidekick script is added in the HTML <body> section, this allows the rest of the page to display while Sidekick is loading.
     -->
     <script>
