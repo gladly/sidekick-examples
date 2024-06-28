@@ -1,9 +1,9 @@
-# Gladly Sidekick Examples
-These are examples of different ways you can configure the Gladly Sidekick on the web. 
+# GladlApp Examples
+These are examples of different ways you can configure the Glad App on the web. 
 
-You can view the Sidekick developer documentation [here](https://developer.gladly.com/sidekick/).
+You can view the Glad App developer documentation [here](https://developer.gladly.com/glad-app/).
 
-To help with exploring the Sidekick functionality a small webserver is included and can be run, for this [Node](https://nodejs.org/) and [NPM](https://www.npmjs.com/) must be installed. 
+To help with exploring the Glad App functionality a small webserver is included and can be run, for this [Node](https://nodejs.org/) and [NPM](https://www.npmjs.com/) must be installed. 
 To run the webserver do the following. 
 ```
 $ npm install
@@ -23,7 +23,7 @@ Gladly allows you to customize the minimized chat button that is rendered on you
 [View Example](docs/custom-minimized-button)
 
 ## Working with Events
-This is an example of how the events that Sidekick is emitting can be used. This can be useful if you want to track Sidekick interactions within an analytics platform such as [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/events). 
+This is an example of how the events that Glad App is emitting can be used. This can be useful if you want to track Glad App interactions within an analytics platform such as [Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/events). 
 
 [View Example](docs/working-with-events)
 

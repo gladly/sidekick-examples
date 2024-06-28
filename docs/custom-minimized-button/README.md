@@ -1,5 +1,5 @@
 # Custom Minimized Button Example
-You can customize the minimized chat button that is rendered on your site to better align with your brand. Instead of using the [default button](/docs/default), you can code your own. Below are two examples of custom minimized Sidekick buttons.
+You can customize the minimized chat button that is rendered on your site to better align with your brand. Instead of using the [default button](/docs/default), you can code your own. Below are two examples of custom minimized Glad App buttons.
 
 ![](custom_1.png) ![](custom_2.png)
 
@@ -19,7 +19,7 @@ It is up to you to utilize these classes and hooks properly to render and style 
 
 **Sample HTML**
 
-A new element with ID "custom-gladly-chat-button" is added to the body, CSS will be used to place it where we want on the page. Sidekick will add different classes to the element to tell the button what state Sidekick is in, CSS can then be used to change the apperance of the button to match expectation.
+A new element with ID "custom-gladly-chat-button" is added to the body, CSS will be used to place it where we want on the page. Glad App will add different classes to the element to tell the button what state Glad App is in, CSS can then be used to change the apperance of the button to match expectation.
 ```html
     <button id="custom-gladly-chat-button" onclick="Gladly.show()">
       <div id="with-no-active-chat">
