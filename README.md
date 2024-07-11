@@ -1,4 +1,4 @@
-# GladlApp Examples
+# Glad App Examples
 These are examples of different ways you can configure the Glad App on the web. 
 
 You can view the Glad App developer documentation [here](https://developer.gladly.com/glad-app/).
