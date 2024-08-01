@@ -1,7 +1,7 @@
 {
-  "name": "sidekick-examples",
+  "name": "glad-app-examples",
   "version": "1.0.0",
-  "description": "Sidekick examples",
+  "description": "Glad App examples",
   "main": "index.js",
   "directories": {
     "doc": "docs"

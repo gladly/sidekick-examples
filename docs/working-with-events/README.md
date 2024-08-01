@@ -1,7 +1,7 @@
 # Working with Events
-The following examples illustrate how to make use of the number of events that Sidekick emits. The full list of events that Sidekick emits can be found [here](https://developer.gladly.com/sidekick/Gladly.html#event:availability:change). 
+The following examples illustrate how to make use of the number of events that Glad App emits. The full list of events that Glad App emits can be found [here](https://developer.gladly.com/glad-app/Gladly.html#event:availability:change). 
 
-To subscribe to events Sidekick must first be initialized and be ready to use. To know when Sideick is initialized and ready to be used you should make use of the [manual initialization](https://developer.gladly.com/sidekick/) method. The Sidekick API uses Javascript Promises to signal that Sidekick has been initialized. More information about Promises can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This script MUST be inserted after the Sidekick load script above. A full setup example can be found [here](/docs/working-with-events/example.html).
+To subscribe to events Glad App must first be initialized and be ready to use. To know when Sideick is initialized and ready to be used you should make use of the [manual initialization](https://developer.gladly.com/glad-app/) method. The Glad App API uses Javascript Promises to signal that Glad App has been initialized. More information about Promises can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This script MUST be inserted after the Glad App load script above. A full setup example can be found [here](/docs/working-with-events/example.html).
 
 **Simple Event Example**
 ```javascript 
@@ -9,8 +9,8 @@ To subscribe to events Sidekick must first be initialized and be ready to use. T
         appId: '', // This is a value you will be given by Gladly and is specific to each customer.
       }).then(() => {
           /**
-            The function inside 'then()' will be called once Sidekick is fully initialized and ready to be used.
-            Events can only be subscribed to after Sidekick has been initialized and ready to be used.
+            The function inside 'then()' will be called once Glad App is fully initialized and ready to be used.
+            Events can only be subscribed to after Glad App has been initialized and ready to be used.
           */
           Gladly.on('message:sent', (e) => {
             console.log(`User sent a message with type: ${e.type}`);
@@ -31,12 +31,12 @@ Gladly.init({
     appId: '', // This is a value you will be given by Gladly and is specific to each customer.
 }).then(() => {
     /**
-      The function inside 'then()' will be called once Sidekick is fully initialized and ready to be used.
-      Events can only be subscribed to after Sidekick has been initialized and ready to be used.
+      The function inside 'then()' will be called once Glad App is fully initialized and ready to be used.
+      Events can only be subscribed to after Glad App has been initialized and ready to be used.
     */
     Gladly.on('message:sent', (e) => {
         ga('send', 'event', {
-            eventCategory: 'gladlySidekick',
+            eventCategory: 'gladApp',
             eventAction: 'message sent',
         });
     });
